@@ -1,5 +1,5 @@
 import React from "react";
-import { BiChevronRight, BiSearch,BiChevronDown, BiMenu } from "react-icons/bi";
+import { BiChevronRight, BiSearch,BiChevronDown, BiMenu, BiChevronLeft, BiShareAlt } from "react-icons/bi";
 
 const NavSm = () => {
   return (
@@ -7,25 +7,16 @@ const NavSm = () => {
         <div className="text-white flex items-center justify-between">
             <div>
                 <h3 className="text-xl font-bold">It All Starts Here!</h3>
-                <span className="text-gray-400 text-xs flex items-center">
-                    Mumbai <BiChevronRight />
-                </span>
             </div>
             <div className="w-8 h-8">
-                <BiSearch className="w-full h-full" />
+                <BiShareAlt className="w-full h-full" />
             </div>
         </div>
     </>
   )
 };
-const NavMd = () => {
-    return (
-        <div className="w-full flex items-center bg-white gap-3 px-3 py-2 rounded-sm">
-            <BiSearch />
-            <input type="search" className="w-full focus:outline-none" placeholder="Search for Movie,Events,Plays,Sports and Activies" />
-        </div>
-    )
-};
+
+
 const NavLg = () => {
     return(
         <>
@@ -59,17 +50,17 @@ const NavLg = () => {
 
 
 
-const Navbar = () => {
+const MovieNavbar = () => {
 return (
   <>
-    <nav className="bg-navCol-800 px-4 py-2">
+    <nav className=" bg-navCol-800 px-4 py-2">
         <div className="md:hidden">{
             /*Mobile Screen*/
             <NavSm />
         }</div>
-        <div className="hidden lg:hidden md:flex">{
+        <div className="hidden lg:hidden md:block">{
             /*Tablet Screen*/
-            <NavMd />
+            <NavSm />
         }</div>
         <div className="hidden lg:flex">{
             /*desktop Screen*/
@@ -81,4 +72,4 @@ return (
 
 };
 
-export default Navbar;
+export default MovieNavbar;
