@@ -2,6 +2,9 @@ import React from "react";
 import EntertainmentCardSlider from "../components/EntertaimentCarousal/EntertainmentCard.component";
 import Premiere from "../components/Premiere/Premiere.component";
 
+import PosterSlider from "../components/PosterSlider/PosterSlider.component";
+import TempPoster from "../config/TempPoster.config";
+
 const HomePage = () => {
     return (
         <>
@@ -20,8 +23,16 @@ const HomePage = () => {
                         alt="Rupay"
                         className="w-full h-full" />
                         </div>
-                        <Premiere />
+                        <PosterSlider images={TempPoster} title="Premieres" subtitle="Brand new releases every Friday" isDark/>
                     </div>
+                </div>
+
+                <div className="container mx-auto py-4">
+                    <PosterSlider images={TempPoster} title="Online Streaming Events" isDark={false} />
+                </div>
+
+                <div className="container mx-auto py-4">
+                    <PosterSlider images={TempPoster} title="Outdoor Events" isDark={false} />
                 </div>
             </div>
         </>
