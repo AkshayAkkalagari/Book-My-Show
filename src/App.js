@@ -28,7 +28,11 @@ function App() {
   return (
     <>
      <DefaultHOC path="/" exact component={HomePage} />
+<<<<<<< HEAD
      <MovieHOC path="/movie/:id" exact component={Movie} />
+=======
+     <MovieHOC path="/Movie/:id" exact component={Movie} />
+>>>>>>> ae9c167acb2240a3e542cd773716728c748e691c
      <DefaultHOC path="/plays" exact component={Plays} />
     </>
   );
