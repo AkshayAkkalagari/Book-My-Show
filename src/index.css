@@ -4,11 +4,31 @@
 @tailwind utilities;
 
 .slick-prev {
-    left: 3% !important;
-    z-index: 1;
+  left: 3% !important;
+  z-index: 1;
+
 }
 
-.slick-next {
-    right: 3% !important;
-    z-index: 1;
+.slick-next{
+  right: 3% !important;
+  z-index: 1;
+
+}
+
+.slick-prev:before{
+  color: black !important;
+  background-color:transparent;
+
+
+}
+.slick-next:before{
+color: black !important;
+background-color:transparent;
+
+}
+
+.next-slick-arrow,
+.prev-slick-arrow {
+  color: white;
+  font-size: 48px;
 }
